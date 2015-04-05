@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body >
+
+<div ng-controller="Mainctrl">
+	<button ng-click="broad('Main')">Main Broad</button>
+	<button ng-click="emit('Main')">Main Emit</button>
+<!-- broadcast to all lower childs
+emit to all parents
+ -->
+<div ng-controller="Midctrl">
+	<button ng-click="broad('Mid')">Mid Broad</button>
+	<button ng-click="emit('Mid')">Mid Emit</button>
+<div ng-controller="Btmctrl">
+	<button ng-click="broad('Btm')">Botm Broad</button>
+	<button ng-click="emit('Btm')">Botm Emit</button>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="myCtrl">
+{{val}}
+<button ng-click="inc()">Increment</button>
+<p ng-show="val%2==0">Val is even</p>
+<p ng-hide="val%2==0">Val is odd</p>
+<!--<h5 ng-repeat="x in myarr">
+    {{x}}
+</h5>-->
+<h5 ng-repeat="attr in obj">
+    {{attr}}
+</h5
+</body>
+</html>

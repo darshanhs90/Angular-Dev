@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<input ng-model="srch"/>
+{{srch|uppercase}}
+{{srch|date}}
+<br/>
+<input ng-model="srch1.name"/>
+<h5 ng-repeat="x in arr|filter:srch1|orderBy:'age'|limitTo:2">{{x.name}}'s age is {{x.age}}</h5>
+<!--Custom Filters-->
+<input ng-model="dots"/>
+{{dots|charLimit}}
+
+<!--Array filter-->
+<h5 ng-repeat="x in arr|canDrink:srch">
+<!--    <h5 ng-repeat="x in arr|canDrink:40">-->
+<!--    <h5 ng-repeat="x in arr|canDrink">-->
+    {{x.name}}|||{{x.age}}
+</h5>
+
+
+
+</body>
+</html>

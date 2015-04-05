@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="Store">
+  <head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="anglr.js"></script>
+  </head>
+  <body ng-controller="Contacts">
+    <div>
+      <label>Search</label>
+      <input type="text" ng-model="search">
+    </div>
+    <ul>
+      <li ng-repeat="x in contacts|filter:search">
+        <a href="#contact/{{$index}}">{{contact.name}}</a>
+        :{{contact.number}}
+      </li>
+      
+    </ul>
+  </body>
+</html>

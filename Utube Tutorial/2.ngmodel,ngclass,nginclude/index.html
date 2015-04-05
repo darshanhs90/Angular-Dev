@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red{
+            color:#ff0000;
+        }
+        .italic{
+            font-style:italic;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script type="text/ng-template" id="test">
+        <h1> My Template</h1>
+    </script>
+</head>
+<body ng-controller="myCtrl">
+<!--ng-class-->
+<h1 ng-class="['italic','red']">Red</h1>
+<!--ng-template and ng-include-->
+<div ng-include="'test'" ng-class="'italic'"></div>
+<!--ng-model-->
+<div ng-controller="myCtrl">
+    <input ng-model="md">
+    {{md}}}
+    <div ng-controller="myCtrl1">
+        <input ng-model="md">
+        {{md}}}
+    </div>
+</div>
+<!--Inheritance Error above-->
+<div ng-controller="myCtrl">
+    <input ng-model="md.val">
+    {{md.val}}}
+    <div ng-controller="myCtrl1">
+        <input ng-model="md.val">
+        {{md.val}}}
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

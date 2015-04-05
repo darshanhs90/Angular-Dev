@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="StoreApp">
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="anglr.js"></script>
+    </head>
+    <body>    
+    <div ng-controller="Ctrl">
+        <input  ng-model="name" type="text">
+        <span>{{name}}'s age is</span>
+        <span>{{age}}</span>   
+    </div>
+    <div ng-controller="AnotherCtrl">
+        <input  ng-model="name" type="text">
+        <span>{{name}}'s age is</span>
+        <span>{{age}}</span>   
+    </div>
+    </body>
+</html>

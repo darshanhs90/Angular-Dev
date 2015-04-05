@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="Store">
+  <head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="anglr.js"></script>
+    <style>
+      .first-true{
+       background-color: red; 
+      }
+      
+    </style>
+  </head>
+  <body ng-controller="Ctrl">
+    <div>
+      <input type="text" ng-model="search" placeholder="Search">
+    </div>
+    <div>
+    <ul >
+      <li ng-repeat="n in names|filter:search">{{n.name+"'s age is "+n.age}}
+            <button ng-click="remove($index)" class="first-{{$first}}">x</button>
+        <span ng-show="$first">First</span>
+        <span ng-show="$middle">Middle</span>
+        <span ng-show="$last">Last</span>
+        
+      </li>            
+    </ul>
+    <span>There are {{names.length}} people in the list</span>
+    </div>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="new_name">
+      <br/>
+      <label>Age :</label>
+      <input type="number" ng-model="new_age">
+        <br/>
+      <button ng-click="add()">Add User</button>
+    </div>
+  </body>
+</html>

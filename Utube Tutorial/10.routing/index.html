@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="myCtrl">
+
+
+<ng-view></ng-view>
+
+
+<script id="view1.html" type="text/ng-template">
+	<div>this is some text:{{mydata}}</div
+</script>
+<script id="view2.html" type="text/ng-template">
+	<div>this is other text:{{mydata}}</div
+</script>
+
+
+
+</body>
+</html>
